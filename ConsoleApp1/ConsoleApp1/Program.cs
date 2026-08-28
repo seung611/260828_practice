@@ -3,13 +3,30 @@
 using System;
 using ConsoleApp1;
 
-class Program  
+class Program
 {
+    private const string CafeName = "one썸 플레이스";
     static void Main(string[] args)
     {
+        ShoppingList[] menuList = new []
+        {
+            new ShoppingList("아메리카노", (MenuCategory)1, 4500),
+            new ShoppingList("카페라떼", (MenuCategory)1, 5000),
+            new ShoppingList("자몽에이드", (MenuCategory)1, 5500),
+            new ShoppingList("휘낭시에", (MenuCategory)2, 2500),
+            new ShoppingList("마카다미아쿠키", (MenuCategory)2, 3000),
+            new ShoppingList("딸기케이크", (MenuCategory)2, 6000)
+        };
         
-        
-        
+        Console.WriteLine("----------------------------------------");
+        Console.WriteLine($"{CafeName} 주문 키오스크");
+        Console.WriteLine("----------------------------------------");
+        Console.WriteLine("[메뉴판]");
+        for (int i = 0; i < menuList.Length; i++)
+        {
+            Console.Write($"{i + 1}. ");
+            menuList[i].MenuListPrint();
+        }
         
         // 1부터 6 사이의 번호를 받습니다. 숫자가 아니거나 범위를 벗어나면 다시 묻습니다.  
         int menuNumber = ConsoleInput.ReadIntInRange("메뉴 번호 : ", 1, 6);
