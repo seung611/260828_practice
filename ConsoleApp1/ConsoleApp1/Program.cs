@@ -34,8 +34,8 @@ class Program
         }
         Console.WriteLine("----------------------------------------");
         Console.WriteLine("[장바구니]");
-        Pay pay = new ("아메리카노", 4500, 3);
-        pay.PayPrint();
+        /*Pay pay = new ("아메리카노", 4500, 3);
+        pay.PayPrint();*/
         Console.WriteLine("----------------------------------------");
         Console.WriteLine("1. 담기  2. 전체 비우기  3. 결제  4. 영업 종료");
         int cartNumber = ConsoleInput.ReadIntInRange("번호 : ", 1, 4);
@@ -49,5 +49,18 @@ class Program
 
         // 결과를 보여 준 뒤 화면을 지우기 전에 잠시 멈춥니다.  
         ConsoleInput.Pause();
+        
+        /*while (true)  
+        {  
+            Console.Clear();
+
+            // 화면을 그린다
+
+            int picked = ConsoleInput.ReadIntInRange("번호 : ", 1, 4);
+
+            // 골라진 번호대로 처리하고 결과를 출력한다
+
+            ConsoleInput.Pause();  
+        }*/
     }  
 }
