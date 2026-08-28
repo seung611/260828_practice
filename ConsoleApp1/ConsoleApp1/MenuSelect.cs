@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp1;
 
-public abstract class Pay
+public class MenuSelect
 {
     
 }
